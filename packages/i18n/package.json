@@ -1,0 +1,9 @@
+{
+  "name": "@edusims/i18n",
+  "version": "0.1.0",
+  "description": "محرك التعريب: العربية أولاً، اتجاه تلقائي RTL/LTR، قواميس قابلة للتوسعة",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": { "test": "vitest run", "build": "tsc -p tsconfig.json" },
+  "devDependencies": { "vitest": "^2.1.0", "typescript": "^5.6.0" }
+}
