@@ -66,3 +66,5 @@ export function bootstrap(container: HTMLElement): void {
 
   view.start();
 }
+
+export { QUESTIONS } from './quiz.js';
