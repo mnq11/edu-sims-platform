@@ -99,3 +99,84 @@ main { max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
   border-top: 1px solid #dde8ea;
   margin-top: 2rem;
 }
+
+/* ---- قسم المحاكاة القابلة للّعب ---- */
+.playable-section { margin-bottom: 2rem; }
+.playable-section h2 { color: var(--primary-dark); margin: 0 0 0.8rem; }
+.playable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.playable-card {
+  display: grid;
+  gap: 0.35rem;
+  background: linear-gradient(150deg, var(--surface), #eef6f7);
+  border: 2px solid var(--primary);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.playable-card:hover, .playable-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(15, 61, 66, 0.15);
+  outline: none;
+}
+.playable-card strong { color: var(--primary-dark); font-size: 1.1rem; }
+.playable-card span { color: var(--muted); font-size: 0.9rem; }
+.playable-card .play-cta { color: var(--primary); font-weight: 700; }
+
+/* ---- مشغّل المحاكاة ---- */
+.sim-nav { margin-bottom: 0.8rem; }
+.back-link { color: var(--primary); font-weight: 700; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+.sim-header { margin-bottom: 1rem; }
+.sim-header h2 { color: var(--primary-dark); margin: 0 0 0.3rem; }
+.sim-header p { color: var(--muted); margin: 0; }
+.sim-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 1.2rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .sim-shell { grid-template-columns: 1fr; }
+}
+.sim-stage {
+  background: var(--surface);
+  border: 1px solid #dde8ea;
+  border-radius: 14px;
+  padding: 0.8rem;
+}
+.sim-stage canvas { width: 100%; height: auto; display: block; }
+.sim-controls {
+  display: grid;
+  gap: 0.9rem;
+  background: var(--surface);
+  border: 1px solid #dde8ea;
+  border-radius: 14px;
+  padding: 1rem;
+}
+.sim-controls sim-slider, .sim-controls sim-button { display: block; }
+.sim-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.share {
+  font: inherit;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  border: 2px dashed var(--primary);
+  background: transparent;
+  color: var(--primary-dark);
+  cursor: pointer;
+  min-height: 40px;
+}
+.share:hover, .share:focus-visible { background: #e3f1f2; outline: none; }
+.algo-picker { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

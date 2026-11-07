@@ -1,5 +1,7 @@
 import { NEW_SIMULATIONS } from '@edusims/catalog';
 import type { SimulationEntry } from '@edusims/catalog';
+import { t } from '@edusims/i18n';
+import { PLAYABLE_SIMS } from './player.js';
 
 /** يجمع الحقول الفريدة من الكتالوج لأزرار التصفية. */
 function uniqueFields(entries: readonly SimulationEntry[]): string[] {
@@ -38,10 +40,23 @@ function card(entry: SimulationEntry): string {
 export function renderCatalog(root: HTMLElement): void {
   const fields = uniqueFields(NEW_SIMULATIONS);
   root.innerHTML = `
+    <section class="playable-section" aria-label="${t('app.playableSection')}">
+      <h2>${t('app.playableSection')}</h2>
+      <div class="playable-grid">
+        ${PLAYABLE_SIMS.map(
+          (s) => `
+          <a class="playable-card" href="#/sim/${s.id}">
+            <strong>${s.nameAr}</strong>
+            <span>${s.tagline}</span>
+            <span class="play-cta">${t('app.playNow')} ←</span>
+          </a>`,
+        ).join('')}
+      </div>
+    </section>
     <div class="toolbar" role="search">
       <label class="search-label">
-        <span>ابحث في المحاكاة</span>
-        <input type="search" id="q" placeholder="مثال: الفائدة المركبة، الخلية، دوبلر…" />
+        <span>${t('app.searchLabel')}</span>
+        <input type="search" id="q" placeholder="${t('app.searchPlaceholder')}" />
       </label>
       <div class="field-filters" role="group" aria-label="تصفية حسب المجال">
         <button class="chip active" data-field="">الكل (${NEW_SIMULATIONS.length})</button>
@@ -66,7 +81,7 @@ export function renderCatalog(root: HTMLElement): void {
   const render = (): void => {
     const results = NEW_SIMULATIONS.filter((e) => matches(e, search.value, activeField));
     grid.innerHTML = results.map(card).join('');
-    status.textContent = `يظهر ${results.length} من أصل ${NEW_SIMULATIONS.length} محاكاة جديدة`;
+    status.textContent = t('app.resultCount', { shown: results.length, total: NEW_SIMULATIONS.length });
   };
 
   search.addEventListener('input', render);
