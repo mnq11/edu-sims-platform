@@ -1,0 +1,10 @@
+{
+  "name": "منصة المحاكاة التعليمية المفتوحة",
+  "short_name": "محاكاة",
+  "start_url": "/",
+  "display": "standalone",
+  "dir": "rtl",
+  "lang": "ar",
+  "background_color": "#ffffff",
+  "theme_color": "#1f6f78"
+}
