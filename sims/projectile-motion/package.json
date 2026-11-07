@@ -1,0 +1,10 @@
+{
+  "name": "@edusims/sim-projectile-motion",
+  "version": "0.1.0",
+  "description": "المحاكاة الرائدة: الحركة المقذوفة — النموذج المرجعي لمعايير المنصة",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": { "test": "vitest run", "build": "tsc -p tsconfig.json" },
+  "dependencies": { "@edusims/core": "*" },
+  "devDependencies": { "typescript": "^5.6.0", "vitest": "^2.1.0" }
+}
