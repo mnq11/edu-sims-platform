@@ -34,6 +34,10 @@ const ar: Dictionary = {
   'assess.correct': 'إجابة صحيحة — أحسنت!',
   'assess.incorrect': 'ليست الإجابة بعد — جرّب مرة أخرى أو اطلب تلميحاً',
   'assess.mastery': 'إتقانك في مفهوم {concept}: {percent}٪',
+  'assess.title': 'اختبر نفسك',
+  'assess.score': 'نتيجتك: {score} من {total}',
+  'assess.tryAgain': 'جولة جديدة',
+  'assess.yourAnswer': 'اكتب إجابتك',
 };
 
 const en: Dictionary = {
@@ -61,6 +65,10 @@ const en: Dictionary = {
   'assess.correct': 'Correct — well done!',
   'assess.incorrect': 'Not quite — try again or ask for a hint',
   'assess.mastery': 'Your mastery of {concept}: {percent}%',
+  'assess.title': 'Test yourself',
+  'assess.score': 'Your score: {score} of {total}',
+  'assess.tryAgain': 'New round',
+  'assess.yourAnswer': 'Type your answer',
 };
 
 export const BUILTIN_DICTIONARIES: Readonly<Record<string, Dictionary>> = { ar, en };
