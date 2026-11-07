@@ -1,0 +1,9 @@
+{
+  "name": "@edusims/core",
+  "version": "0.1.0",
+  "description": "نواة المحاكاة: خصائص تفاعلية، ساعة محاكاة، نموذج أساسي قابل للتسلسل",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": { "test": "vitest run", "build": "tsc -p tsconfig.json" },
+  "devDependencies": { "vitest": "^2.1.0", "typescript": "^5.6.0" }
+}
