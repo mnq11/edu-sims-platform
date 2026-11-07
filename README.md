@@ -1,2 +1,45 @@
-# edu-sims-platform
-منصة محاكاة تعليمية مفتوحة لجميع المستخدمين دون تسجيل دخول — Open educational simulation platform (400 sims catalog, RTL-first, WCAG 2.2 AA, PWA)
+# منصة المحاكاة التعليمية المفتوحة | Open Educational Simulations Platform
+
+منصة محاكاة علمية ورياضية تفاعلية، **مجانية ومفتوحة لجميع المستخدمين دون تسجيل دخول** — عربية أولاً (RTL أصيل)، بإتاحة WCAG 2.2 AA إلزامية، وتعمل دون اتصال كتطبيق ويب تقدمي (PWA).
+
+Free, open, login-free interactive STEM simulations — Arabic-first (native RTL), WCAG 2.2 AA by default, offline-capable PWA.
+
+## المبادئ الحاكمة | Principles
+
+1. **لا حسابات إطلاقاً** — الحالة تُحفظ محلياً وتُشارَك برابط مرمّز، والمزامنة اختيارية برمز مجهول.
+2. **العلم أولاً** — النموذج الفيزيائي/الرياضي رياضيات صرفة مختبَرة ضد قيم مرجعية، منفصل تماماً عن العرض.
+3. **الإتاحة شرط إطلاق** — لا تُنشر محاكاة قبل اجتياز بوابة WCAG 2.2 AA (لوحة مفاتيح، وصف تفاعلي، تباين، تقليل حركة).
+4. **العربية أولاً** — RTL ليس ترجمة لاحقة بل حالة التصميم الافتراضية، مع مرجع مصطلحات علمية موحد.
+5. **الأداء حق للجميع** — خطوة زمنية ثابتة، ميزانية حجم صارمة، وتشغيل سلس على أجهزة متواضعة.
+
+## هيكل المستودع | Repository Structure
+
+```
+packages/
+  core/      @edusims/core    نواة المحاكاة: Property، ساعة بخطوات ثابتة، نموذج قابل للتسلسل
+  ui/        @edusims/ui      مكونات تحكم Web Components بإتاحة وRTL مدمجين
+  catalog/   @edusims/catalog كتالوج 200 محاكاة جديدة معززة التفاصيل (ضمن خارطة 400)
+apps/
+  web/       @edusims/web     واجهة المنصة: تصفح وبحث وتصفية — PWA دون خوادم
+sims/
+  projectile-motion/          المحاكاة الرائدة المرجعية بنموذج فيزيائي مختبَر علمياً
+docs/                           المعمارية ومعايير المحاكاة وبوابة الإتاحة
+```
+
+## البدء | Getting Started
+
+```bash
+npm install
+npm run dev        # تطوير واجهة المنصة
+npm test           # اختبارات الوحدات (vitest)
+npm run typecheck  # فحص الأنواع الصارم
+npm run build      # بناء كل الحزم
+```
+
+## المساهمة | Contributing
+
+نرحب بالمساهمات — اقرأ [CONTRIBUTING.md](CONTRIBUTING.md) و[معايير المحاكاة](docs/sim-standard.md) قبل البدء.
+
+## الرخصة | License
+
+MIT — انظر [LICENSE](LICENSE). المحتوى التعليمي مرخّص CC BY 4.0.
