@@ -300,3 +300,23 @@ main { max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
   margin: 0;
 }
 .balance-banner.on { background: #e2f3e7; color: #2e7d4f; }
+
+/* ===== إمكانية الوصول (WCAG 2.2) ===== */
+
+/* 2.3.3/2.3.4 — تقليل الحركة عند تفضيل المستخدم */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 2.4.11 — لا يُحجب العنصر المُركَّز عليه خلف الترويسة اللاصقة */
+:focus {
+  scroll-margin-top: 90px;
+  scroll-margin-bottom: 70px;
+}
