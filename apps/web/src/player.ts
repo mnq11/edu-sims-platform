@@ -93,6 +93,36 @@ export const PLAYABLE_SIMS: readonly PlayableSim[] = [
     tagline: 'غيّر الميل والمقطع وشاهد y = mx + b ترسم نفسها',
     load: () => import('@edusims/sim-linear-equations'),
   },
+  {
+    id: 'collision-lab',
+    nameAr: 'مختبر التصادم',
+    tagline: 'أطلق كتلتين وشاهد الزخم والطاقة محفوظين في كل ارتطام',
+    load: () => import('@edusims/sim-collision-lab'),
+  },
+  {
+    id: 'wave-motion',
+    nameAr: 'الموجات الجيبية',
+    tagline: 'غيّر التردد والسرعة واكتشف العلاقة الذهبية v = f·λ',
+    load: () => import('@edusims/sim-wave-motion'),
+  },
+  {
+    id: 'quadratic-explorer',
+    nameAr: 'مستكشف المعادلة التربيعية',
+    tagline: 'حرّك المعاملات وراقب الرأس والمميز والجذور تتحدث لحظياً',
+    load: () => import('@edusims/sim-quadratic-explorer'),
+  },
+  {
+    id: 'pythagoras-explorer',
+    nameAr: 'نظرية فيثاغورس',
+    tagline: 'مربعات على الأضلاع الثلاثة — شاهد a²+b² تساوي c² دائماً',
+    load: () => import('@edusims/sim-pythagoras-explorer'),
+  },
+  {
+    id: 'central-tendency',
+    nameAr: 'مقاييس النزعة المركزية',
+    tagline: 'أضف البيانات واكتشف لماذا الوسيط أمتن من الوسط أمام القيم المتطرفة',
+    load: () => import('@edusims/sim-central-tendency'),
+  },
 ];
 
 /** يرسم صفحة تشغيل محاكاة واحدة ويحمّلها عند الطلب (تقسيم شيفرة تلقائي). */

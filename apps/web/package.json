@@ -1,6 +1,6 @@
 {
   "name": "@edusims/web",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,6 +13,8 @@
     "@edusims/catalog": "*",
     "@edusims/i18n": "*",
     "@edusims/sim-balancing-equations": "*",
+    "@edusims/sim-central-tendency": "*",
+    "@edusims/sim-collision-lab": "*",
     "@edusims/sim-compound-interest": "*",
     "@edusims/sim-density-buoyancy": "*",
     "@edusims/sim-dice-probability": "*",
@@ -22,8 +24,11 @@
     "@edusims/sim-parallelogram-area": "*",
     "@edusims/sim-pendulum": "*",
     "@edusims/sim-projectile-motion": "*",
+    "@edusims/sim-pythagoras-explorer": "*",
+    "@edusims/sim-quadratic-explorer": "*",
     "@edusims/sim-sorting-visualized": "*",
     "@edusims/sim-springs-hooke": "*",
+    "@edusims/sim-wave-motion": "*",
     "@edusims/ui": "*"
   },
   "devDependencies": {
