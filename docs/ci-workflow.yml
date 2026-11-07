@@ -1,0 +1,27 @@
+# سير عمل CI — انسخ هذا الملف إلى .github/workflows/ci.yml لتفعيله
+# (رفعه مباشرة إلى workflows يتطلب صلاحية workflow في GitHub)
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Type check
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Unit tests
+        run: npm test
+      - name: Build
+        run: npm run build
