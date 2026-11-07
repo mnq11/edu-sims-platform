@@ -63,6 +63,36 @@ export const PLAYABLE_SIMS: readonly PlayableSim[] = [
     tagline: 'الفقاعي ضد الاختياري ضد الإدخالي — شاهد التعقيد يحدث',
     load: () => import('@edusims/sim-sorting-visualized'),
   },
+  {
+    id: 'springs-hooke',
+    nameAr: 'النوابض وقانون هوك',
+    tagline: 'حرّر الكتلة وقِس زمن الدورة — الطاقة محفوظة أمام عينيك',
+    load: () => import('@edusims/sim-springs-hooke'),
+  },
+  {
+    id: 'density-buoyancy',
+    nameAr: 'الكثافة والطفو',
+    tagline: 'مبدأ أرخميدس حي — لماذا يطفو الجليد ويغوص الحجر؟',
+    load: () => import('@edusims/sim-density-buoyancy'),
+  },
+  {
+    id: 'parallelogram-area',
+    nameAr: 'مساحة متوازي الأضلاع',
+    tagline: 'حرّك القصّ واكتشف لماذا لا تتغير المساحة أبداً',
+    load: () => import('@edusims/sim-parallelogram-area'),
+  },
+  {
+    id: 'dice-probability',
+    nameAr: 'احتمالات نردين',
+    tagline: 'ارمِ مئات المرات وشاهد قانون الأعداد الكبيرة يتقارب',
+    load: () => import('@edusims/sim-dice-probability'),
+  },
+  {
+    id: 'linear-equations',
+    nameAr: 'الخط المستقيم وميله',
+    tagline: 'غيّر الميل والمقطع وشاهد y = mx + b ترسم نفسها',
+    load: () => import('@edusims/sim-linear-equations'),
+  },
 ];
 
 /** يرسم صفحة تشغيل محاكاة واحدة ويحمّلها عند الطلب (تقسيم شيفرة تلقائي). */
